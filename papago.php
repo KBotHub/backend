@@ -14,6 +14,7 @@ curl_setopt($ch,CURLOPT_POSTFIELDS, $postvars);
 $headers = array();
 $headers[] = "X-Naver-Client-Id: ".$client_id;
 $headers[] = "X-Naver-Client-Secret: ".$client_secret;
+header("Access-Control-Allow-Origin: *");
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 $response = curl_exec ($ch);
 $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
