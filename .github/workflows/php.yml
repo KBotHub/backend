@@ -16,9 +16,9 @@ jobs:
         php: [ '7.3', '7.4' ]
     name: PHP ${{ matrix.php }}
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Setup PHP
-        uses: nanasess/setup-php@master
+        uses: php-actions/composer@v2
         with:
           php-version: ${{ matrix.php }}
       - run: php php_test.html
