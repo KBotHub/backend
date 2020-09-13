@@ -21,4 +21,4 @@ jobs:
         uses: nanasess/setup-php@master
         with:
           php-version: ${{ matrix.php }}
-      #- run: php papago.php
+      - run: php index.html
